@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class NetworkService private constructor() {
     private val mRetrofit: Retrofit
-    val BASE_URL = "https://jsonplaceholder.typicode.com"
+    private var BASE_URL = "https://anapioficeandfire.com"
 
     init {
         val interceptor = HttpLoggingInterceptor()
@@ -27,6 +27,7 @@ class NetworkService private constructor() {
 
 
     companion object {
+
         private var mInstance: NetworkService? = null
         val instance: NetworkService?
             get() {
